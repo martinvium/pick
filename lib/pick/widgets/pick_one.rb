@@ -1,10 +1,11 @@
 module Pick
   module Widget
     class PickOne
-      attr_reader :name, :picks
+      attr_reader :name, :picks, :widget
 
       def initialize
         @picks = []
+        @widget = :pick_one
       end
 
       def setup(name, block)
