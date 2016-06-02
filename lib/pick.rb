@@ -1,5 +1,10 @@
 require "pick/version"
+require "pick/config"
+require "pick/widgets/pick_one"
+require 'pry'
 
 module Pick
-  # Your code goes here...
+  def self.config(&block)
+    Config.new.setup(block)
+  end
 end
