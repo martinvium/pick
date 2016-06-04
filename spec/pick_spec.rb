@@ -7,13 +7,7 @@ RSpec.describe Pick do
 
   describe '#pick_one' do
     subject do
-      Pick.config do
-        pick_one :os do
-          pick :windows
-          pick :osx
-          pick :linux
-        end
-      end
+      build_config :os
     end
 
     it 'question is registered' do

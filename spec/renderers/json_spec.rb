@@ -2,13 +2,7 @@ require 'spec_helper'
 
 RSpec.describe Pick::Renderer::JSON do
   let(:config) do
-    Pick.config do
-      pick_one :os do
-        pick :windows
-        pick :osx
-        pick :linux
-      end
-    end
+    build_config :os, :interests
   end
     
   describe '#render' do
