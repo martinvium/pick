@@ -13,7 +13,8 @@ module Pick
           {
             label: translate(q.name),
             widget: q.widget,
-            options: render_picks(q.picks)
+            options: render_picks(q.picks),
+            external_code: q.name
           }
         end
       end
